@@ -316,103 +316,124 @@ class _DalefonMenuScreenState extends State<DalefonMenuScreen> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           insetPadding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: Container(
-            width: 310.0,
-            height: 310.0,
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
-            decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF242527) : Colors.white,
-              borderRadius: BorderRadius.circular(12.0),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(isDark ? 0.4 : 0.1),
-                  blurRadius: 20.0,
-                  offset: const Offset(0, 10),
-                ),
-              ],
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Center(
-                  child: Container(
-                    padding: const EdgeInsets.all(12.0),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF6226A6).withOpacity(0.15),
-                      shape: BoxShape.circle,
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              Container(
+                width: 320.0,
+                padding: const EdgeInsets.fromLTRB(20.0, 32.0, 20.0, 20.0),
+                decoration: BoxDecoration(
+                  color: isDark ? const Color(0xFF1C1C1E) : Colors.white,
+                  borderRadius: BorderRadius.circular(16.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(isDark ? 0.4 : 0.08),
+                      blurRadius: 24.0,
+                      offset: const Offset(0, 12),
                     ),
-                    child: const Icon(
-                      Icons.swap_horizontal_circle_outlined,
-                      color: Color(0xFF6226A6),
-                      size: 32.0,
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Center(
+                      child: Container(
+                        width: 56.0,
+                        height: 56.0,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF6226A6).withOpacity(0.12),
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.swap_horizontal_circle_outlined,
+                          color: Color(0xFF6226A6),
+                          size: 28.0,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 16.0),
-                Text(
-                  'Convertirse a Post-pago',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w600,
-                    color: isDark ? const Color(0xFFFEFFFF) : const Color(0xFF13171A),
-                  ),
-                ),
-                const SizedBox(height: 8.0),
-                Text(
-                  'Aquí se definirá el mensaje explicativo y las condiciones para convertirse en Post-pago (renta mensual de línea).',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 12.0,
-                    fontWeight: FontWeight.w400,
-                    color: isDark ? const Color(0xFF8E8E93) : const Color(0xFF5A5165),
-                  ),
-                ),
-                const SizedBox(height: 20.0),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    setState(() {
-                      _isPostPaid = true;
-                    });
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF6226A6),
-                    foregroundColor: Colors.white,
-                    shadowColor: Colors.transparent,
-                    padding: const EdgeInsets.symmetric(vertical: 12.0),
-                    shape: const StadiumBorder(),
-                  ),
-                  child: const Text(
-                    'Convertirme a Post-pago',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w600,
+                    const SizedBox(height: 20.0),
+                    Text(
+                      'Convertirse a Post-pago',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 17.0,
+                        fontWeight: FontWeight.w600,
+                        color: isDark ? const Color(0xFFFEFFFF) : const Color(0xFF13171A),
+                      ),
                     ),
-                  ),
+                    const SizedBox(height: 10.0),
+                    Text(
+                      'Aquí se definirá el mensaje explicativo y las condiciones para convertirse en Post-pago (renta mensual de línea).',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 13.0,
+                        height: 1.5,
+                        fontWeight: FontWeight.w400,
+                        color: isDark ? const Color(0xFF8E8E93) : const Color(0xFF5A5165),
+                      ),
+                    ),
+                    const SizedBox(height: 24.0),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                        setState(() {
+                          _isPostPaid = true;
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF6226A6),
+                        foregroundColor: Colors.white,
+                        shadowColor: Colors.transparent,
+                        padding: const EdgeInsets.symmetric(vertical: 13.0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                      child: const Text(
+                        'Convertirme a Post-pago',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 13.5,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 8.0),
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      style: TextButton.styleFrom(
+                        foregroundColor: isDark ? const Color(0xFF8E8E93) : const Color(0xFF5A5165),
+                        padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      ),
+                      child: const Text(
+                        'Cancelar',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 13.5,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 4.0),
-                TextButton(
+              ),
+              Positioned(
+                top: 8.0,
+                right: 8.0,
+                child: IconButton(
                   onPressed: () => Navigator.pop(context),
-                  style: TextButton.styleFrom(
-                    foregroundColor: isDark ? Colors.white70 : const Color(0xFF5A5165),
-                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  icon: Icon(
+                    Icons.close_rounded,
+                    color: isDark ? const Color(0xFF8E8E93) : const Color(0xFF5A5165).withOpacity(0.7),
+                    size: 20.0,
                   ),
-                  child: const Text(
-                    'Cancelar',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
+                  splashRadius: 20.0,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },
