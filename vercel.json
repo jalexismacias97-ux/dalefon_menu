@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "flutter build web --release",
+  "buildCommand": "bash build_vercel.sh",
   "outputDirectory": "build/web",
-  "installCommand": "flutter pub get",
+  "installCommand": "echo 'Flutter install handled in build script'",
   "framework": {
     "name": "flutter"
   },
