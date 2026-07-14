@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.75" height="14" viewBox="0 0 15.75 14">
+  <g id="Icon" transform="translate(0.875)">
+    <rect id="Area" width="14" height="14" fill="#fcfcfc" opacity="0"/>
+    <g id="Icon-2" data-name="Icon" transform="translate(0 6.125)">
+      <circle id="_97c66fe9-d6fa-443d-9bc0-0610fcf3dd7a" data-name="97c66fe9-d6fa-443d-9bc0-0610fcf3dd7a" cx="0.875" cy="0.875" r="0.875" transform="translate(6.125)" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+      <circle id="_11b038df-a8f7-44c3-8f8c-b29bb4bb755d" data-name="11b038df-a8f7-44c3-8f8c-b29bb4bb755d" cx="0.875" cy="0.875" r="0.875" transform="translate(12.25)" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+      <circle id="a50cd7b0-63de-47e7-9932-50767a3f1954" cx="0.875" cy="0.875" r="0.875" fill="none" stroke="#3d3d3d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/>
+    </g>
+  </g>
+</svg>

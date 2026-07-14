@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="Grupo_27844" data-name="Grupo 27844" transform="translate(-39 -340)">
+    <g id="Icon" transform="translate(39 340)">
+      <g id="Icon-2" data-name="Icon" transform="translate(1.29 2.499)">
+        <path id="c93f82aa-c337-4204-a6e2-5ea5c6592fa2" d="M0,0H16V16H0Z" transform="translate(-1.29 -2.499)" fill="none"/>
+        <path id="_9a131890-3419-4dd6-b3a2-1ad3459c0693" data-name="9a131890-3419-4dd6-b3a2-1ad3459c0693" d="M7.333,2H14V7.333H12L9.333,8.667V7.333h-2Z" transform="translate(-1.29 -2.499)" fill="none" stroke="#5a5165" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="_8110d4fc-3a2c-4410-8570-f491d0ccc8e8" data-name="8110d4fc-3a2c-4410-8570-f491d0ccc8e8" d="M10,10.667v2.666A.666.666,0,0,1,9.333,14H4a.667.667,0,0,1-.667-.667V4A.667.667,0,0,1,4,3.333H5.333" transform="translate(-1.29 -2.499)" fill="none" stroke="#5a5165" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="e8ee1a88-3e7e-447c-9dbd-2d1c608e75ef" d="M6.667,12v.007" transform="translate(-1.29 -2.499)" fill="none" stroke="#5a5165" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <text id="_" data-name="$" transform="translate(49 346)" fill="#5a5165" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="3.5" font-family="Poppins-ExtraBold, Poppins" font-weight="800"><tspan x="0" y="0">$</tspan></text>
+  </g>
+</svg>

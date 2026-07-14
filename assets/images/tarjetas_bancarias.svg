@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.514" height="14.396" viewBox="0 0 18.514 14.396">
+  <g id="Grupo_27375" data-name="Grupo 27375" transform="translate(0.5 0.5)">
+    <g id="Icon" transform="translate(13.014)">
+      <rect id="Area" width="4.5" height="4.5" transform="translate(0 0)" fill="none" opacity="0"/>
+      <g id="Icon-2" data-name="Icon" transform="translate(0)">
+        <line id="_7d29b556-14fb-415c-bd4a-73c102a370c0" data-name="7d29b556-14fb-415c-bd4a-73c102a370c0" y2="4.5" transform="translate(2.25)" fill="none" stroke="#5a5165" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="_263855fa-5e5b-49c0-910b-de2d71eb9c5a" data-name="263855fa-5e5b-49c0-910b-de2d71eb9c5a" x2="4.5" transform="translate(0 2.25)" fill="none" stroke="#5a5165" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Icon_feather-credit-card" data-name="Icon feather-credit-card" transform="translate(0 4.909)">
+      <path id="Trazado_712" data-name="Trazado 712" d="M2.664,6h10.48a1.116,1.116,0,0,1,1.164,1.061v6.365a1.116,1.116,0,0,1-1.164,1.061H2.664A1.116,1.116,0,0,1,1.5,13.426V7.061A1.116,1.116,0,0,1,2.664,6Z" transform="translate(-1.5 -6)" fill="none" stroke="#5a5165" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Trazado_713" data-name="Trazado 713" d="M1.5,15H14.309" transform="translate(-1.5 -11.817)" fill="none" stroke="#5a5165" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

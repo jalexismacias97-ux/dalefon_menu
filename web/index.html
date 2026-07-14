@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Dalefon – Mi menú">
+
+  <!-- Viewport mobile-first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Dalefon">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Dalefon</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Mobile-only gate ───────────────────────────────────────── */
+    :root {
+      --purple: #6226A6;
+      --purple-light: rgba(98, 38, 166, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0f;
+      color: #ffffff;
+    }
+
+    /* Desktop block screen — hidden on mobile */
+    #desktop-block {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #0d0d0f;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    #desktop-block .icon-wrap {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--purple-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #desktop-block .icon-wrap svg {
+      width: 40px;
+      height: 40px;
+      fill: var(--purple);
+    }
+
+    #desktop-block h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+    }
+
+    #desktop-block p {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
+      max-width: 320px;
+      line-height: 1.6;
+    }
+
+    #desktop-block .phone-preview {
+      width: 64px;
+      height: 112px;
+      border: 2.5px solid var(--purple);
+      border-radius: 14px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    #desktop-block .phone-preview::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--purple);
+    }
+
+    #desktop-block .phone-preview::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--purple-light);
+      border: 2px solid var(--purple);
+    }
+
+    #desktop-block .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--purple-light);
+      border: 1px solid rgba(98, 38, 166, 0.3);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #c084fc;
+    }
+
+    /* Flutter app container */
+    #flutter-root {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Desktop block screen -->
+  <div id="desktop-block">
+    <div class="phone-preview"></div>
+
+    <div class="icon-wrap">
+      <!-- Mobile phone icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 1.01 7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+      </svg>
+    </div>
+
+    <h1>Solo disponible en móvil</h1>
+    <p>Esta aplicación está diseñada exclusivamente para dispositivos móviles.<br>Ábrela desde tu teléfono para acceder.</p>
+
+    <div class="badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#c084fc" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+      </svg>
+      Acceso solo desde dispositivo móvil
+    </div>
+  </div>
+
+  <!-- Flutter app root -->
+  <div id="flutter-root">
+    <script src="flutter_bootstrap.js" async></script>
+  </div>
+
+  <script>
+    (function () {
+      // Detect desktop: screens wider than 768px AND not a touch device
+      function isDesktop() {
+        const hasTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        const isWide   = window.screen.width > 768;
+        // Also check user-agent for tablet/phone keywords
+        const uaMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        return isWide && !hasTouch && !uaMobile;
+      }
+
+      if (isDesktop()) {
+        // Show block screen
+        var block = document.getElementById('desktop-block');
+        block.style.display = 'flex';
+        // Hide flutter root so engine never boots on desktop
+        var root = document.getElementById('flutter-root');
+        root.style.display = 'none';
+      }
+
+      // Re-check on resize (covers emulator DevTools resize)
+      window.addEventListener('resize', function () {
+        var block = document.getElementById('desktop-block');
+        var root  = document.getElementById('flutter-root');
+        if (isDesktop()) {
+          block.style.display = 'flex';
+          root.style.display  = 'none';
+        } else {
+          block.style.display = 'none';
+          root.style.display  = 'block';
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
